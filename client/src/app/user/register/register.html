@@ -1,0 +1,96 @@
+<div class="w-full max-w-md mx-auto h-full flex flex-col justify-center animate-fade-in-up">
+  <!-- Header -->
+  <div class="mb-8 text-center md:text-left">
+    <h2 class="text-3xl font-extrabold text-slate-800 dark:text-white tracking-tight">Create an account</h2>
+    <p class="text-slate-500 dark:text-slate-400 mt-2">Start your 30-day free trial. No credit card required.</p>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="space-y-4">
+    <!-- Full Name -->
+    <div class="relative group">
+      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+        <svg class="h-5 w-5 text-slate-400 group-focus-within:text-emerald-500 transition-colors duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+      </div>
+      <input
+        type="text"
+        placeholder="Full Name"
+        formControlName="fullName"
+        class="block w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 focus:bg-white transition-all duration-300 dark:bg-slate-800 dark:border-slate-700 dark:text-white dark:placeholder-slate-500"
+      />
+    </div>
+
+    <!-- Email Field -->
+    <div class="relative group">
+      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+        <svg class="h-5 w-5 text-slate-400 group-focus-within:text-emerald-500 transition-colors duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      </div>
+      <input
+        type="email"
+        placeholder="Email Address"
+        formControlName="email"
+        class="block w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 focus:bg-white transition-all duration-300 dark:bg-slate-800 dark:border-slate-700 dark:text-white dark:placeholder-slate-500"
+      />
+    </div>
+
+    <!-- Password Field -->
+    <div class="relative group">
+      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+        <svg class="h-5 w-5 text-slate-400 group-focus-within:text-emerald-500 transition-colors duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+      </div>
+      <input
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+        class="block w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 focus:bg-white transition-all duration-300 dark:bg-slate-800 dark:border-slate-700 dark:text-white dark:placeholder-slate-500"
+      />
+    </div>
+
+    <!-- Confirm Password Field -->
+    <div class="relative group">
+      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+        <svg class="h-5 w-5 text-slate-400 group-focus-within:text-emerald-500 transition-colors duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      </div>
+      <input
+        type="password"
+        placeholder="Confirm Password"
+        formControlName="confirmPassword"
+        class="block w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 focus:bg-white transition-all duration-300 dark:bg-slate-800 dark:border-slate-700 dark:text-white dark:placeholder-slate-500"
+      />
+    </div>
+    
+    <!-- Checklist / Terms -->
+    <div class="flex items-start text-sm mt-4">
+      <div class="flex items-center h-5">
+        <input type="checkbox" required class="rounded border-slate-300 text-emerald-600 focus:ring-emerald-500 form-checkbox h-4 w-4 transition duration-150 ease-in-out" />
+      </div>
+      <div class="ml-2">
+        <label class="text-slate-500 dark:text-slate-400">
+          I agree to the <a href="#" class="font-medium text-emerald-600 hover:text-emerald-500 transition-colors">Terms of Service</a> and <a href="#" class="font-medium text-emerald-600 hover:text-emerald-500 transition-colors">Privacy Policy</a>
+        </label>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="pt-4">
+      <button
+        type="submit"
+        class="w-full relative flex justify-center py-3 px-4 border border-transparent text-sm font-semibold rounded-xl text-white bg-emerald-600 hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 shadow-lg shadow-emerald-500/30 transition-all duration-300 transform active:scale-[0.98]"
+      >
+        Gain Access
+      </button>
+    </div>
+  </form>
+
+  <p class="mt-8 text-center text-sm text-slate-500 dark:text-slate-400">
+    Already have an account?
+    <a routerLink="/login" class="font-semibold text-emerald-600 hover:text-emerald-500 transition-colors">Sign in to your account</a>
+  </p>
+</div>
