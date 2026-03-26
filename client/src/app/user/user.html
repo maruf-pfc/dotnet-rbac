@@ -1,0 +1,72 @@
+<div class="min-h-screen relative flex items-center justify-center overflow-hidden bg-slate-900 border-none">
+  <!-- Dynamic Background Effects -->
+  <div class="absolute inset-0 z-0">
+    <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-emerald-500/20 blur-[120px] rounded-full animate-pulse blur-3xl"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-teal-500/20 blur-[120px] rounded-full animate-pulse blur-3xl delay-1000"></div>
+    <div class="absolute top-[30%] left-[60%] w-[30%] h-[30%] bg-blue-500/10 blur-[100px] rounded-full"></div>
+  </div>
+
+  <!-- Layout Container -->
+  <div class="relative z-10 w-full max-w-5xl px-4 py-8 pointer-events-none">
+    <div class="mx-auto flex flex-col md:flex-row bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-3xl overflow-hidden pointer-events-auto max-h-[90vh]">
+      
+      <!-- Brand Sidebar (Left Side) -->
+      <div class="hidden md:flex flex-col justify-between w-5/12 p-10 bg-gradient-to-br from-emerald-600/90 to-teal-800/90 relative overflow-hidden">
+        <!-- Abstract patterns inside sidebar -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-10 left-0 w-48 h-48 bg-emerald-400/20 rounded-full blur-2xl transform -translate-x-1/2"></div>
+        
+        <div class="relative z-20">
+          <h1 class="text-3xl font-bold text-white tracking-tight flex items-center gap-2">
+            <svg class="w-8 h-8 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+            SecureHub
+          </h1>
+          <p class="mt-4 text-emerald-50 font-medium">Enterprise-grade secure access.</p>
+        </div>
+
+        <div class="relative z-20 mt-12 mb-8">
+          <div class="p-6 bg-white/10 rounded-2xl border border-white/10 backdrop-blur-md">
+            <p class="text-white text-sm italic">"The simplicity of the identity management is unparalleled. It integrates flawlessly into our ecosystem."</p>
+            <div class="mt-4 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-emerald-200/30 flex items-center justify-center text-white font-bold border border-white/20">JS</div>
+              <div>
+                <p class="text-white text-sm font-semibold">Jane Smith</p>
+                <p class="text-emerald-200 text-xs">Security Lead, TechCorp</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative z-20 flex gap-4 text-sm text-emerald-200">
+          <a href="#" class="hover:text-white transition-colors duration-200">Support</a>
+          <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a>
+        </div>
+      </div>
+
+      <!-- Main Form Container (Right Side) -->
+      <div class="w-full md:w-7/12 p-8 md:p-12 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl relative overflow-y-auto custom-scrollbar">
+        <router-outlet></router-outlet>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+/* Custom scrollbar for form area if it gets too long */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.3);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(156, 163, 175, 0.5);
+}
+</style>
